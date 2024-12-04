@@ -1,0 +1,6 @@
+framework module VLStoreKitFramework {
+  umbrella header "VLStoreKitFramework.h"
+  export *
+
+  module * { export * }
+}

@@ -1,0 +1,291 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VLStoreKitFramework
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreData
+import Foundation
+import SocketIO
+import Starscream
+import StoreKit
+import Swift
+import UIKit
+import VLBeaconLib
+@_exported import VLStoreKitFramework
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+public struct VLTransactionalObject {
+  public init(withContentId contentId: Swift.String, seasonId: Swift.String?, seriesId: Swift.String?, planId: Swift.String?, contentType: Swift.String?)
+}
+@objc final public class VLStoreKit : ObjectiveC.NSObject {
+  public static let sharedStoreKitManager: VLStoreKitFramework.VLStoreKit
+  public init(withAPIVersion apiVersion: VLStoreKitFramework.VLStoreKit.APIVersion = .V1, beacon: VLBeaconLib.VLBeacon? = nil, apiBaseUrl: Swift.String? = nil, graphQLAPIBaseUrl: Swift.String? = nil)
+  final public var enableDebugLogs: Swift.Bool {
+    get
+    set
+  }
+  weak final public var storeKitDelegate: (any VLStoreKitFramework.VLStoreKitDelegate)? {
+    get
+    set
+  }
+  weak final public var storeKitAppStoreSubscriptionDelegate: (any VLStoreKitFramework.VLStoreKitAppStoreSubscriptionDelegate)? {
+    get
+    set
+  }
+  weak final public var storeKitSubscriptionSyncDelegate: (any VLStoreKitFramework.VLStoreKitSubscriptionSyncDelegate)? {
+    get
+    set
+  }
+  weak final public var socketSyncDelgate: (any VLStoreKitFramework.VLStoreKitSocketMessageDelegate)? {
+    get
+    set
+  }
+  @frozen public enum APIVersion {
+    case V1
+    case V2
+    public static func == (a: VLStoreKitFramework.VLStoreKit.APIVersion, b: VLStoreKitFramework.VLStoreKit.APIVersion) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var setAPIVersion: VLStoreKitFramework.VLStoreKit.APIVersion {
+    get
+    set
+  }
+  final public var setAPIBaseUrl: Swift.String? {
+    get
+    set
+  }
+  final public var setGraphQLAPIBaseUrl: Swift.String? {
+    get
+    set
+  }
+  final public func initateTransaction(productDetails: VLStoreKitFramework.VLProductDetails, transactionType: VLStoreKitFramework.TransactionType = .purchase)
+  final public func initateTransaction(productDetails: VLStoreKitFramework.VLProductDetails, transactionType: VLStoreKitFramework.TransactionType = .purchase, deviceId: Swift.String? = nil, makeInternalSubscriptionCall: Swift.Bool = false, planId: Swift.String? = nil, isPlanUpgrade: Swift.Bool? = nil)
+  final public func initateTransaction(productDetails: VLStoreKitFramework.VLProductDetails, transactionType: VLStoreKitFramework.TransactionType = .purchase, deviceId: Swift.String? = nil, makeInternalSubscriptionCall: Swift.Bool = false, transactionalPurchaseObject: VLStoreKitFramework.VLTransactionalObject)
+  final public func initateRestorePurchase(restorePurchaseCallback: @escaping ((_ storeKitModel: VLStoreKitFramework.VLStoreKitModel?, _ error: VLStoreKitFramework.TransactionError?) -> Swift.Void))
+  final public func checkPreviousTransaction(restorePurchaseCallback: @escaping ((_ storeKitModel: VLStoreKitFramework.VLStoreKitModel?, _ error: VLStoreKitFramework.TransactionError?) -> Swift.Void))
+  final public func getTransactionDetailsFromApple(transactionDetailsCallback: @escaping ((_ storeKitModel: VLStoreKitFramework.VLStoreKitModel?, _ error: VLStoreKitFramework.TransactionError?) -> Swift.Void))
+  final public func fetchRegionAndCurrencyCode(productIds: Swift.Set<Swift.String>, callback: @escaping ((_ regionCode: Swift.String?, _ currencyCode: Swift.String?) -> Swift.Void))
+  final public func fetchPlans(serviceType: Swift.String?, storeCountryCode: Swift.String? = "default", device: Swift.String?, location: (latitude: Swift.String, longitude: Swift.String)?)
+  final public func listenForStoreKitCallbacks()
+  final public func deRegisterStoreKitCallbacks()
+  public static func setupConfig(apiKey: Swift.String, authorizationToken: Swift.String, apiBaseUrl: Swift.String? = nil, graphQLBaseUrl: Swift.String? = nil)
+  public static func updateAuthorizationToken(_ authorizationToken: Swift.String)
+  final public func finishInCompleteTransactions()
+  final public func syncSubscriptionStatusToVLSystem(planId: Swift.String?, transactionId: Swift.String?, originalTransactionId: Swift.String?, productId: Swift.String, transactionReceipt: Foundation.Data?, transactionType: VLStoreKitFramework.TransactionType)
+  final public func syncSubscriptionStatusToVLSystem(planId: Swift.String?, transactionId: Swift.String?, originalTransactionId: Swift.String?, productId: Swift.String, transactionReceipt: Foundation.Data?, transactionType: VLStoreKitFramework.TransactionType, subscriptionSyncCallback: ((_ subscriptionSyncResponse: VLStoreKitFramework.SubscriptionSyncResponse?, _ errorCode: Swift.String?) -> Swift.Void)?)
+  final public func syncTransactionPurchaseStatusToVLSystem(planId: Swift.String?, transactionId: Swift.String?, originalTransactionId: Swift.String?, productId: Swift.String, transactionReceipt: Foundation.Data?, transactionType: VLStoreKitFramework.TransactionType, transactionPurchaseObject: VLStoreKitFramework.VLTransactionalObject)
+  final public func reSyncFailedTransactionalPurchase(userIdentifier: Swift.String, syncComplete: (() -> Swift.Void)? = nil)
+  @objc deinit
+}
+public struct VLProductDetails {
+  public init(productId: Swift.String, productName: Swift.String, productDesc: Swift.String, planType: Swift.String? = nil, promotionCode: Swift.String? = nil, purchaseType: Swift.String? = nil, discountAmount: Swift.Int? = nil, userUniqueIdentifier: Swift.String, paymentMethod: Swift.String? = nil, currencyCode: Swift.String? = nil, transactionId: Swift.String? = nil, orderTotalAmount: Swift.Int? = nil, orderSubTotalAmount: Swift.Int? = nil, orderValue: Swift.Int? = nil, orderTaxAmount: Swift.Int? = nil, cartContents: [[Swift.String : Swift.String]]? = nil, productDetails: [[Swift.String : Swift.String]]? = nil, additionalData: [Swift.String : Swift.String]? = nil)
+}
+public struct VLStoreKitModel {
+  public let transactionId: Swift.String?
+  public let originalTransactionId: Swift.String?
+  public let productId: Swift.String
+  public let transactionDate: Foundation.Date?
+  public let transactionEndDate: Foundation.Date?
+  public let transactionReceipt: Foundation.NSData?
+}
+public enum JWTDecodeError : Foundation.LocalizedError, Swift.CustomDebugStringConvertible {
+  case invalidBase64URL(Swift.String)
+  case invalidJSON(Swift.String)
+  case invalidPartCount(Swift.String, Swift.Int)
+  public var localizedDescription: Swift.String {
+    get
+  }
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public protocol VLStoreKitDelegate : AnyObject {
+  func transactionFinished(storeKitModel: VLStoreKitFramework.VLStoreKitModel, isSubscriptionSyncInProcess: Swift.Bool)
+  func transactionFailed(error: VLStoreKitFramework.TransactionError)
+  func transactionInProcess()
+  func connectionToAppStoreFailed(errorMessage: Swift.String)
+  func processFetchedPlans(planData: Foundation.Data?, isSuccess: Swift.Bool)
+}
+public protocol VLStoreKitAppStoreSubscriptionDelegate : AnyObject {
+  func transactionFromAppStoreFound(showOverlay: Swift.Bool)
+  func transactionDoneFromAppStoreCompleted(storeKitModel: VLStoreKitFramework.VLStoreKitModel)
+}
+public protocol VLStoreKitSubscriptionSyncDelegate : AnyObject {
+  func subscriptionSyncCompleted(subscriptionSyncResponse: VLStoreKitFramework.SubscriptionSyncResponse)
+  func subscriptionSyncFailed(errorCode: VLStoreKitFramework.SubscriptionSyncStatus)
+  func transactionPurchaseSync(isSyncCompleted: Swift.Bool, errorCode: VLStoreKitFramework.SubscriptionSyncStatus)
+}
+public protocol VLStoreKitSocketMessageDelegate : AnyObject {
+  func socketMessageHandler()
+}
+public func decode(jwt: Swift.String) throws -> any VLStoreKitFramework.JWT
+public struct Claim {
+  public var rawValue: Any? {
+    get
+  }
+  public var string: Swift.String? {
+    get
+  }
+  public var boolean: Swift.Bool? {
+    get
+  }
+  public var double: Swift.Double? {
+    get
+  }
+  public var integer: Swift.Int? {
+    get
+  }
+  public var date: Foundation.Date? {
+    get
+  }
+  public var array: [Swift.String]? {
+    get
+  }
+}
+public protocol JWT {
+  var header: [Swift.String : Any] { get }
+  var body: [Swift.String : Any] { get }
+  var signature: Swift.String? { get }
+  var string: Swift.String { get }
+  var expiresAt: Foundation.Date? { get }
+  var issuer: Swift.String? { get }
+  var subject: Swift.String? { get }
+  var audience: [Swift.String]? { get }
+  var issuedAt: Foundation.Date? { get }
+  var notBefore: Foundation.Date? { get }
+  var identifier: Swift.String? { get }
+  var expired: Swift.Bool { get }
+}
+extension VLStoreKitFramework.JWT {
+  public func claim(name: Swift.String) -> VLStoreKitFramework.Claim
+  public subscript(claim: Swift.String) -> VLStoreKitFramework.Claim {
+    get
+  }
+}
+public enum TransactionType {
+  case restore
+  case purchase
+  case rent
+  case buy
+  case productFetch
+  public static func == (a: VLStoreKitFramework.TransactionType, b: VLStoreKitFramework.TransactionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum TransactionError : Swift.String, Swift.Error {
+  case transactionFailed
+  case transactionCancelled
+  case transactionPending
+  case unknown
+  case productIdNotFound
+  case productNotAvailable
+  case noRestorePurchaseFound
+  case restoreTransactionFailed
+  case deviceNotSupported
+  case noProductAvailableForRent
+  case noProductAvailableForPurchase
+  case noTransactionDetailsFound
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SubscriptionSyncStatus : Swift.String, Swift.Error {
+  case completed
+  case paymentFailed
+  case duplicateUser
+  case subscriptionServiceFailed
+  case userSubscriptionNotFound
+  case illegalArugment
+  case illegalState
+  case receiptExpired
+  case allRestoreSubscriptionError
+  case subscriptionAPICallFailed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ErrorResponse : Swift.Decodable {
+  public var message: Swift.String?
+  public var path: [Swift.String]?
+  public var extensions: VLStoreKitFramework.ErrorResponse.Extensions?
+  public struct Extensions : Swift.Decodable {
+    public var code: Swift.String?
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Subscription : Swift.Decodable {
+  public var site: Swift.String?
+  public var siteId: Swift.String?
+  public var userId: Swift.String?
+  public var email: Swift.String?
+  public var planId: Swift.String?
+  public var identifier: Swift.String?
+  public var planAmount: Swift.Double?
+  public var paymentHandlerDisplayName: Swift.String?
+  public var paymentUniqueId: Swift.String?
+  public var vlTransactionId: Swift.String?
+  public var platform: Swift.String?
+  public var paymentState: Swift.String?
+  public var currencyCode: Swift.String?
+  public var totalAmount: Swift.Double?
+  public var preTaxAmount: Swift.Double?
+  public var countryCode: Swift.String?
+  public var freeTrial: Swift.Bool?
+  public var numberOfAllowedStreams: Swift.Int?
+  public var numberOfAllowedDevices: Swift.Int?
+  public var subscriptionEndDate: Swift.String?
+  public var subscriptionStatus: Swift.String?
+  public var subscriptionStartDate: Swift.String?
+  public var addedDate: Swift.String?
+  public var offerName: Swift.String?
+  public var transactionDate: Swift.String?
+  public var offerCode: Swift.String?
+  public var createdOrderIDs: [Swift.String]?
+  public var taxAmount: Swift.Double?
+  public var cardType: Swift.String?
+  public var ipAddress: Swift.String?
+  public var paymentHandlerResponse: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CreateAccountAndSubscriptionResponse : Swift.Decodable {
+  public var subscription: VLStoreKitFramework.Subscription?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DataResponse : Swift.Decodable {
+  public var createAccountAndSubscription: VLStoreKitFramework.CreateAccountAndSubscriptionResponse?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SubscriptionSyncResponse : Swift.Decodable {
+  public var errors: [VLStoreKitFramework.ErrorResponse]?
+  public var data: VLStoreKitFramework.DataResponse?
+  public var errorCode: Swift.String?
+  public var errorMessage: Swift.String?
+  public var status: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension VLStoreKitFramework.VLStoreKit.APIVersion : Swift.Equatable {}
+extension VLStoreKitFramework.VLStoreKit.APIVersion : Swift.Hashable {}
+extension VLStoreKitFramework.VLStoreKit.APIVersion : Swift.Sendable {}
+extension VLStoreKitFramework.TransactionType : Swift.Equatable {}
+extension VLStoreKitFramework.TransactionType : Swift.Hashable {}
+extension VLStoreKitFramework.TransactionError : Swift.Equatable {}
+extension VLStoreKitFramework.TransactionError : Swift.Hashable {}
+extension VLStoreKitFramework.TransactionError : Swift.RawRepresentable {}
+extension VLStoreKitFramework.SubscriptionSyncStatus : Swift.Equatable {}
+extension VLStoreKitFramework.SubscriptionSyncStatus : Swift.Hashable {}
+extension VLStoreKitFramework.SubscriptionSyncStatus : Swift.RawRepresentable {}
