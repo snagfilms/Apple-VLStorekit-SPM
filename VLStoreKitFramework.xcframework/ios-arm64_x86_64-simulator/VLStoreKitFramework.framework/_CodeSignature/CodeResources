@@ -14,43 +14,43 @@
 		</data>
 		<key>Modules/VLStoreKitFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		6ozk2kXSp890OPl8zdQb7kKoZOA=
+		p8Ew/7jPtOXTSL8qu6TMN1nfvyY=
 		</data>
 		<key>Modules/VLStoreKitFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Ms1/mOa2S31cWOwIl944ng+8Vx4=
+		F46h5Mk/WhieRjoZKvjU2x04DGY=
 		</data>
 		<key>Modules/VLStoreKitFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		mGdkbE2d5qpzVu2EC+1Cm8WH/gE=
+		fpj/e5yrRhMC6sfzP9FBqPDbq3s=
 		</data>
 		<key>Modules/VLStoreKitFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Ms1/mOa2S31cWOwIl944ng+8Vx4=
+		F46h5Mk/WhieRjoZKvjU2x04DGY=
 		</data>
 		<key>Modules/VLStoreKitFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pmgN+8FA2UaOei8rQO1t0GG3rUU=
+		tlqDAXUkATYrrIQizxrVkP+T0Io=
 		</data>
 		<key>Modules/VLStoreKitFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		6ozk2kXSp890OPl8zdQb7kKoZOA=
+		p8Ew/7jPtOXTSL8qu6TMN1nfvyY=
 		</data>
 		<key>Modules/VLStoreKitFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		tHIaj62jEb8+2QGsp9R6szgwDBA=
+		dPQQsdVFW/4EYbHir5T1wcIVviY=
 		</data>
 		<key>Modules/VLStoreKitFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		KTaLlFvxdexzDyikLuKZS/z8rGA=
+		O0cKpzVDeXz+qB9E9TlR3OfOHMo=
 		</data>
 		<key>Modules/VLStoreKitFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tHIaj62jEb8+2QGsp9R6szgwDBA=
+		dPQQsdVFW/4EYbHir5T1wcIVviY=
 		</data>
 		<key>Modules/VLStoreKitFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0uqo1zKFbF7PnRKy3qyI/p3HjOM=
+		3WFLhzVuQg7j0CwQ/X0ySzfnMUw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,70 +78,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EMrZkW/Y0se8qjalYbTlInX67Pwesco6S6um9k3tNyo=
+			/ckOvUKDeQrw6lfY4rwiMpVUqcJ9tLKxBfiGJE7JzMs=
 			</data>
 		</dict>
 		<key>Modules/VLStoreKitFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mm+yG+u5gPVxQwHt8PZXJvbLRvroR1oUH+XUIZbWs6I=
+			6N8HmPGxTyzKQWlFVkh/MhXlQvfMtCry7v/vdemA4nY=
 			</data>
 		</dict>
 		<key>Modules/VLStoreKitFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TsQ14apozi2w8Lfd1KXMRU0PPy2M5AM8J5EsrstS3Dw=
+			G/JMkwe/bbXo2kebNMsLrXkjI1DgdBYOTEd6cmukiDc=
 			</data>
 		</dict>
 		<key>Modules/VLStoreKitFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mm+yG+u5gPVxQwHt8PZXJvbLRvroR1oUH+XUIZbWs6I=
+			6N8HmPGxTyzKQWlFVkh/MhXlQvfMtCry7v/vdemA4nY=
 			</data>
 		</dict>
 		<key>Modules/VLStoreKitFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Hw0qka1ZejXDWP29cIL9MLWX7uf2LdO6LY2YNiS5/0=
+			75tlL0reXKZRPQEA76AP8NGDYxQy0NHhdoMiDNJwXsE=
 			</data>
 		</dict>
 		<key>Modules/VLStoreKitFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EMrZkW/Y0se8qjalYbTlInX67Pwesco6S6um9k3tNyo=
+			/ckOvUKDeQrw6lfY4rwiMpVUqcJ9tLKxBfiGJE7JzMs=
 			</data>
 		</dict>
 		<key>Modules/VLStoreKitFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tdvWoSsqy9dSExTqPHzKUTHRF5WLLgmFwn8/Z1ooDRg=
+			pgWDAqU/94j2Fu+/JTt01+5Er4GWQuG25xPDkqcDFbg=
 			</data>
 		</dict>
 		<key>Modules/VLStoreKitFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1VuV5TzzXnqGstSE01HRUDbHi5Vqe23YHBxEC6VAhMs=
+			m+ahtXMtcVWVtqJ+f2ZtrdMyH3wMdUlCRWUIRRWeWZo=
 			</data>
 		</dict>
 		<key>Modules/VLStoreKitFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tdvWoSsqy9dSExTqPHzKUTHRF5WLLgmFwn8/Z1ooDRg=
+			pgWDAqU/94j2Fu+/JTt01+5Er4GWQuG25xPDkqcDFbg=
 			</data>
 		</dict>
 		<key>Modules/VLStoreKitFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zRfRiGF2I9EDqGruK4Q/ncLMh4+m4/vPhD5ahunBKIM=
+			zC4GERck3oRFJQRz5p84gSmW4yOa6VOJXGGB7i5loWQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
