@@ -70,7 +70,7 @@ public struct VLTransactionalObject {
   final public func checkPreviousTransaction(restorePurchaseCallback: @escaping ((_ storeKitModel: VLStoreKitFramework.VLStoreKitModel?, _ error: VLStoreKitFramework.TransactionError?) -> Swift.Void))
   final public func getTransactionDetailsFromApple(transactionDetailsCallback: @escaping ((_ storeKitModel: VLStoreKitFramework.VLStoreKitModel?, _ error: VLStoreKitFramework.TransactionError?) -> Swift.Void))
   final public func fetchRegionAndCurrencyCode(productIds: Swift.Set<Swift.String>, callback: @escaping ((_ regionCode: Swift.String?, _ currencyCode: Swift.String?) -> Swift.Void))
-  final public func fetchPlans(serviceType: Swift.String?, storeCountryCode: Swift.String? = "default", device: Swift.String?, location: (latitude: Swift.String, longitude: Swift.String)?)
+  final public func fetchPlans(serviceType: Swift.String? = "SVOD", storeCountryCode: Swift.String? = nil, device: Swift.String? = "ios_phone", location: (latitude: Swift.String, longitude: Swift.String)? = nil)
   final public func listenForStoreKitCallbacks()
   final public func deRegisterStoreKitCallbacks()
   public static func setupConfig(apiKey: Swift.String, authorizationToken: Swift.String, apiBaseUrl: Swift.String? = nil, graphQLBaseUrl: Swift.String? = nil)

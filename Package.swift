@@ -14,7 +14,7 @@ let package = Package(
         .library(name: "VLStoreKitSPM", targets: ["VLStoreKitSPM"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/snagfilms/iOS-VLBeacon-SPM.git", branch: "3.0.0"),
+        .package(url: "https://github.com/snagfilms/iOS-VLBeacon-SPM.git", branch: "release-3.1.0"),
         .package(url: "https://github.com/socketio/socket.io-client-swift.git", branch: "master")
     ],
     targets: [
